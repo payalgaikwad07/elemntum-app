@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --pink: #F472B6;
+  --green: #86EFAC;
+  --coral: #F87171;
+  --purple: #8B5CF6;
+  --text: #111111;
+  --muted: #555555;
+  --bg: #ffffff;
+  --mint: #D5EBE3; /* Soft mint green to match Figma newsletter and footer */
+  --yellow-highlight: #FFE082;
+  --green-highlight: #C2F0D5;
+  --pink-highlight: #FBCFE8;
+  --orange-underline: #F59E0B;
+  
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Global Brush-like Underline Effect */
+.brush-underline {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.brush-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 4px;
+  background: var(--orange-underline);
+  border-radius: 4px;
+  opacity: 0.85;
+}
+
+/* Global Marker Highlight Effect */
+.marker-highlight {
+  display: inline-block;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-weight: inherit;
+}
+.marker-highlight--pink {
+  background: var(--pink-highlight);
+}
+.marker-highlight--green {
+  background: var(--green-highlight);
+}
+

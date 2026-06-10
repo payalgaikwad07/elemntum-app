@@ -1,0 +1,141 @@
+.testimonial {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11rem 5% 11rem;
+  background: #ffffff;
+  min-height: 800px;
+  overflow: hidden;
+}
+
+/* Orbiting avatars combined image background container */
+.testimonial__bg-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.testimonial__bg-img {
+  width: 1800px;
+  height: auto;
+  max-height: 2000px;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+/* Main quote card overlay in the center */
+.testimonial__center {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 680px;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.testimonial__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.testimonial__heading .brush-underline::after {
+  height: 4px;
+  bottom: -2px;
+}
+
+.testimonial__quote {
+  background: #F4FAF7; /* Soft green card background matching Figma mockup */
+  border-radius: 28px;
+  padding: 3.5rem 3.5rem 3rem;
+  border: 1px solid rgba(213, 235, 227, 0.6);
+  position: relative;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.02);
+}
+
+/* Quotation marks */
+.testimonial__quote-icon {
+  font-family: var(--font-display);
+  font-size: 5.5rem;
+  color: #B2DCD0;
+  line-height: 1;
+  position: absolute;
+  user-select: none;
+  opacity: 0.8;
+}
+
+.testimonial__quote-icon--left {
+  top: 15px;
+  left: 20px;
+}
+
+.testimonial__quote-icon--right {
+  bottom: -45px;
+  right: 25px;
+}
+
+.testimonial__quote-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.85;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .testimonial {
+    min-height: auto;
+    padding: 6rem 5%;
+  }
+
+  .testimonial__bg-container {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 2rem;
+    order: 2;
+  }
+
+  .testimonial__center {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+  }
+
+  .testimonial__quote {
+    padding: 2.5rem 2rem;
+  }
+
+  .testimonial__quote-icon {
+    font-size: 4rem;
+  }
+  
+  .testimonial__quote-icon--left {
+    top: 5px;
+    left: 10px;
+  }
+
+  .testimonial__quote-icon--right {
+    bottom: -30px;
+    right: 15px;
+  }
+}

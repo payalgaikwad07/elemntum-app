@@ -1,0 +1,90 @@
+.newsletter {
+  background: var(--mint);
+  padding: 8rem 5% 8rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Red double-line squiggle centered above the title */
+.newsletter__squiggle {
+  width: 75px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+/* Purple half-ellipse on the right border */
+.newsletter__purple-shape {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  bottom: 15%;
+  width: 110px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.newsletter__content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 600px;
+}
+
+.newsletter__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.newsletter__sub {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-top: 1.2rem;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+.newsletter__form {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter__btn {
+  background: #000000;
+  color: #ffffff;
+  padding: 0.95rem 2.8rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  font-family: var(--font-body);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.newsletter__btn:hover {
+  background: #222222;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+  .newsletter {
+    padding: 6rem 6% 6rem;
+  }
+  .newsletter__purple-shape {
+    width: 60px;
+    bottom: 5%;
+  }
+}
